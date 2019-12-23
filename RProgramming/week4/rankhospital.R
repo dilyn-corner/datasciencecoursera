@@ -1,8 +1,8 @@
-## This is the general case of best.R - refer to it for any comments.
+# This is the general case of best.R - refer to it for any comments.
 
 rankhospital <- function(state, outcome, num = "best") {
         library(data.table)
-        outcomes <- read.csv("~/builds/git/datasciencecoursera/week4/outcome-of-care-measures.csv", colClasses = "character")
+        outcomes <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
 
         importantOutcomes <- outcomes[ , c(2, 7, 11, 17, 23)]
         names(importantOutcomes) <- c("Hospital", "State", "Heart Attack", "Heart Failure", "Pneumonia")
